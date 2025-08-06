@@ -1,87 +1,89 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background: #1a1a1a;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    font-family: "Poppins", sans-serif;
+body {
+  background: #1a1a1a;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
-#cartao{
-    width: 992px;
-    background-color: #2d2d2d;
-    backdrop-filter: blur(20px);
-    border: 1px solid gray;
-    border-radius: 8px;
+#cartao {
+  width: 100%;
+  max-width: 500px;
+  background-color: #2d2d2d;
+  backdrop-filter: blur(20px);
+  border: 1px solid gray;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
 }
 
-#cartao #logo{
-    display: flex;
-    justify-content: center;
-    height: 100vh;
+#logo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
 }
 
-#logo a{
-    height: 180px;
-    border-radius: 50%;
-    margin-top: 20px;
+.title h1 {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
 }
 
-a img{
-    border-radius: 50%;
-    height: 180px;
+#menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.title{
-    margin-top: -420px;
-    display: flex;
-    justify-content: center;
+#menu li {
+  background-color: rgb(0, 0, 255);
+  border-radius: 12px;
+  transition: all 0.3s ease;
 }
 
-.title h1{
-    color: white;
-    font-size: 30px;
-    font-weight: bolder;
+#menu li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-#menu{
-    width: 720px;
-    margin: 0 auto;
-    height: 55vh;
+#menu a {
+  display: block;
+  padding: 15px;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 12px;
 }
 
 ul{
     list-style-type: none;
 }
 
-#menu li{
-    display: flex;
-    justify-content: center;
-    width: 460px;
-    border-radius: 18px;
-    background-color: rgb(0, 0, 255);
-    margin: 40px auto;
-    transition: all 0.3s ease;
-}
+/* Responsivo */
+@media (max-width: 480px) {
+  .title h1 {
+    font-size: 1.5rem;
+  }
 
-#menu li:hover{
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
+  #logo img {
+    width: 120px;
+    height: 120px;
+  }
 
-#menu a{
-    width: 100%;
-    padding: 20px;
-    border-radius: 18px;
-    text-align: center;
-    color: #ffff;
-    font-weight: 600;
-    text-decoration: none;
+  #menu a {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
 }
